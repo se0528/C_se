@@ -18,5 +18,6 @@ int main(void)
 	for (cnt = 0; cnt < PT; cnt++)
 		printf("ex[%d] = %d\n", cnt, ex[cnt]); // 1~500까지 랜덤 숫자 출력 
 
+
 	return 0;
 }
