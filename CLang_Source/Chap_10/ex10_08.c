@@ -11,6 +11,10 @@ int main(void)
 	printf("상수> #define DT 5\n");
 	printf("배열> score[DT] = {88, 96, 75, 81, 99}; \n");
 
+	for (int cnt = 0; cnt < DT; cnt++) {
+	printf("%d", score[cnt]);
+	}
+
 	sum = sv(score, DT); // 사용자 정의 함수(배열 이름, 기호 상수)
 	avg = sum / 5.0; // 실수형으로 자료형 자동 변환
 
@@ -25,8 +29,11 @@ int sv(int score[], int size) // 사용자 정의 함수 정의
 
 	printf(" \n사용자 정의 함수로 총점 계산 \n");
 
-	for (cnt = 0; cnt < size; cnt++) // 총점 산출
-		total += score[cnt];
+	for (cnt = 0; cnt < size; cnt++) {
+	// 총점 산출
+	score[cnt] += 10;
+	total += score[cnt];
+	}
 
 	return total;
 }
